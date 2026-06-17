@@ -1,2 +1,2 @@
-c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\core\cyw43_wrappers.cpp.o: \
+C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\core\cyw43_wrappers.cpp.o: \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040\cyw43_wrappers.cpp

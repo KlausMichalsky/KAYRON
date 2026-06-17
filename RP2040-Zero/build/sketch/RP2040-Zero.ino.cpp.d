@@ -1,5 +1,5 @@
-c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\RP2040-Zero.ino.cpp.o: \
- c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\RP2040-Zero.ino.cpp \
+C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\RP2040-Zero.ino.cpp.o: \
+ C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\RP2040-Zero.ino.cpp \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040/Arduino.h \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040/stdlib_noniso.h \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040/RP2040Version.h \
@@ -141,11 +141,11 @@ c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\RP2040-Zero.ino.cpp.o: 
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h \
  C:\Users\Klaus\Documents\Arduino\libraries\AccelStepper\src/AccelStepper.h \
- c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\command.h \
- c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\config.h \
- c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\communication.h \
- c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\core.h \
- c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\homing.h \
- c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\motors.h \
- c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\sensors.h \
- c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\utils.h
+ C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\command.h \
+ C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\config.h \
+ C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\communication.h \
+ C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\core.h \
+ C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\homing.h \
+ C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\motors.h \
+ C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\sensors.h \
+ C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\utils.h

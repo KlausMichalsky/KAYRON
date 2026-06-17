@@ -1,5 +1,5 @@
-c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\communication.cpp.o: \
- c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\communication.cpp \
+C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\communication.cpp.o: \
+ C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\communication.cpp \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040/Arduino.h \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040/stdlib_noniso.h \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040/RP2040Version.h \
@@ -134,5 +134,5 @@ c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\communication.cpp.o: \
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040/Bootsel.h \
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
- c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\communication.h \
- c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\config.h
+ C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\communication.h \
+ C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\config.h

@@ -1,4 +1,4 @@
-c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\core\lock.cpp.o: \
+C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\core\lock.cpp.o: \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040\lock.cpp \
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \

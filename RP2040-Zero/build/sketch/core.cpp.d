@@ -1,5 +1,5 @@
-c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\core.cpp.o: \
- c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\core.cpp \
+C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\core.cpp.o: \
+ C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\core.cpp \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040/Arduino.h \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040/stdlib_noniso.h \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040/RP2040Version.h \
@@ -134,19 +134,19 @@ c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\core.cpp.o: \
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/resets.h \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040/Bootsel.h \
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
- c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\command.h \
- c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\config.h \
- c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\core.h \
- c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\homing.h \
+ C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\command.h \
+ C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\config.h \
+ C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\core.h \
+ C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\homing.h \
  C:\Users\Klaus\Documents\Arduino\libraries\AccelStepper\src/AccelStepper.h \
- c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\motors.h \
- c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\sensors.h \
+ C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\motors.h \
+ C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\sensors.h \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\libraries\Wire\src/Wire.h \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040/api/HardwareI2C.h \
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/ArduinoCore-API/api/HardwareI2C.h \
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/pico-sdk/src/rp2_common/hardware_i2c/include/hardware/i2c.h \
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/i2c.h \
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/i2c.h \
- c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\utils.h \
- c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\xy_plane.h \
- c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\z_axis.h
+ C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\utils.h \
+ C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\xy_plane.h \
+ C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\sketch\z_axis.h

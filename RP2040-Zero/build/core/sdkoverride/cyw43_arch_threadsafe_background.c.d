@@ -1,4 +1,4 @@
-c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\core\sdkoverride\cyw43_arch_threadsafe_background.c.o: \
+C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\core\sdkoverride\cyw43_arch_threadsafe_background.c.o: \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040\sdkoverride\cyw43_arch_threadsafe_background.c \
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/pico-sdk/src/rp2_common/pico_cyw43_arch/cyw43_arch_threadsafe_background.c \
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/pico-sdk/src/rp2_common/pico_cyw43_arch/include/pico/cyw43_arch.h \

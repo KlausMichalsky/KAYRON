@@ -1,4 +1,4 @@
-c:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\core\lwip\src\netif\ppp\pppapi.c.o: \
+C:\Users\Klaus\Documents\KAYRON\RP2040-Zero\build\core\lwip\src\netif\ppp\pppapi.c.o: \
  C:\Users\Klaus\AppData\Local\Arduino15\packages\rp2040\hardware\rp2040\5.6.0\cores\rp2040\lwip\src\netif\ppp\pppapi.c \
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/pico-sdk/lib/lwip/src/netif/ppp/pppapi.c \
  C:/Users/Klaus/AppData/Local/Arduino15/packages/rp2040/hardware/rp2040/5.6.0/pico-sdk/lib/lwip/src/include/netif/ppp/ppp_opts.h \

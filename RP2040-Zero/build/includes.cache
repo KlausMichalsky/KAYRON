@@ -7,15 +7,15 @@
   },
   {
     "compile": {
-      "source_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp",
-      "object_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp.o",
-      "depfile_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp",
+      "object_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp.o",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -65,7 +65,7 @@
         "-DWIFICC=CYW43_COUNTRY_WORLDWIDE",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\cores\\rp2040",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp",
         "-o",
         "nul"
       ]
@@ -79,15 +79,15 @@
   },
   {
     "compile": {
-      "source_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp",
-      "object_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp.o",
-      "depfile_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp",
+      "object_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp.o",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -138,7 +138,7 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\cores\\rp2040",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp",
         "-o",
         "nul"
       ]
@@ -152,15 +152,15 @@
   },
   {
     "compile": {
-      "source_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp",
-      "object_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp.o",
-      "depfile_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp",
+      "object_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp.o",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -212,7 +212,7 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
         "-IC:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp",
         "-o",
         "nul"
       ]
@@ -223,15 +223,15 @@
   },
   {
     "compile": {
-      "source_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\Z_Axis.cpp",
-      "object_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\Z_Axis.cpp.o",
-      "depfile_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\Z_Axis.cpp.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\Z_Axis.cpp",
+      "object_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\Z_Axis.cpp.o",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\Z_Axis.cpp.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -283,7 +283,7 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
         "-IC:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\Z_Axis.cpp",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\Z_Axis.cpp",
         "-o",
         "nul"
       ]
@@ -294,15 +294,15 @@
   },
   {
     "compile": {
-      "source_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\command.cpp",
-      "object_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\command.cpp.o",
-      "depfile_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\command.cpp.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\command.cpp",
+      "object_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\command.cpp.o",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\command.cpp.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -354,7 +354,7 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
         "-IC:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\command.cpp",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\command.cpp",
         "-o",
         "nul"
       ]
@@ -365,15 +365,15 @@
   },
   {
     "compile": {
-      "source_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\communication.cpp",
-      "object_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\communication.cpp.o",
-      "depfile_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\communication.cpp.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\communication.cpp",
+      "object_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\communication.cpp.o",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\communication.cpp.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -425,7 +425,7 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
         "-IC:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\communication.cpp",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\communication.cpp",
         "-o",
         "nul"
       ]
@@ -436,15 +436,15 @@
   },
   {
     "compile": {
-      "source_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\core.cpp",
-      "object_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\core.cpp.o",
-      "depfile_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\core.cpp.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\core.cpp",
+      "object_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\core.cpp.o",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\core.cpp.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -496,7 +496,7 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
         "-IC:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\core.cpp",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\core.cpp",
         "-o",
         "nul"
       ]
@@ -507,15 +507,15 @@
   },
   {
     "compile": {
-      "source_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\homing.cpp",
-      "object_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\homing.cpp.o",
-      "depfile_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\homing.cpp.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\homing.cpp",
+      "object_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\homing.cpp.o",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\homing.cpp.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -567,7 +567,7 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
         "-IC:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\homing.cpp",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\homing.cpp",
         "-o",
         "nul"
       ]
@@ -578,15 +578,15 @@
   },
   {
     "compile": {
-      "source_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\motors.cpp",
-      "object_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\motors.cpp.o",
-      "depfile_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\motors.cpp.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\motors.cpp",
+      "object_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\motors.cpp.o",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\motors.cpp.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -638,7 +638,7 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
         "-IC:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\motors.cpp",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\motors.cpp",
         "-o",
         "nul"
       ]
@@ -649,15 +649,15 @@
   },
   {
     "compile": {
-      "source_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\sensors.cpp",
-      "object_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\sensors.cpp.o",
-      "depfile_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\sensors.cpp.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\sensors.cpp",
+      "object_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\sensors.cpp.o",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\sensors.cpp.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -709,7 +709,7 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
         "-IC:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\sensors.cpp",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\sensors.cpp",
         "-o",
         "nul"
       ]
@@ -720,15 +720,15 @@
   },
   {
     "compile": {
-      "source_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\utils.cpp",
-      "object_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\utils.cpp.o",
-      "depfile_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\utils.cpp.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\utils.cpp",
+      "object_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\utils.cpp.o",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\utils.cpp.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -780,7 +780,7 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
         "-IC:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\utils.cpp",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\utils.cpp",
         "-o",
         "nul"
       ]
@@ -791,15 +791,15 @@
   },
   {
     "compile": {
-      "source_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\xy_plane.cpp",
-      "object_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\xy_plane.cpp.o",
-      "depfile_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\xy_plane.cpp.d"
+      "source_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\xy_plane.cpp",
+      "object_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\xy_plane.cpp.o",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\xy_plane.cpp.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -851,7 +851,7 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
         "-IC:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\xy_plane.cpp",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\xy_plane.cpp",
         "-o",
         "nul"
       ]
@@ -863,14 +863,14 @@
   {
     "compile": {
       "source_path": "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src\\Wire.cpp",
-      "object_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\libraries\\Wire\\Wire.cpp.o",
-      "depfile_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\libraries\\Wire\\Wire.cpp.d"
+      "object_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\libraries\\Wire\\Wire.cpp.o",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\libraries\\Wire\\Wire.cpp.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -934,14 +934,14 @@
   {
     "compile": {
       "source_path": "C:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src\\AccelStepper.cpp",
-      "object_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\libraries\\AccelStepper\\AccelStepper.cpp.o",
-      "depfile_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\libraries\\AccelStepper\\AccelStepper.cpp.d"
+      "object_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\libraries\\AccelStepper\\AccelStepper.cpp.o",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\libraries\\AccelStepper\\AccelStepper.cpp.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
@@ -1005,14 +1005,14 @@
   {
     "compile": {
       "source_path": "C:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src\\MultiStepper.cpp",
-      "object_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\libraries\\AccelStepper\\MultiStepper.cpp.o",
-      "depfile_path": "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\libraries\\AccelStepper\\MultiStepper.cpp.d"
+      "object_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\libraries\\AccelStepper\\MultiStepper.cpp.o",
+      "depfile_path": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\libraries\\AccelStepper\\MultiStepper.cpp.d"
     },
     "compile_task": {
       "args": [
         "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\tools\\pqt-gcc\\4.1.0-1aec55e/bin/arm-none-eabi-g++",
         "-I",
-        "c:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build/core",
         "-c",
         "-Werror=return-type",
         "-Wno-psabi",
