@@ -1,10 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"path": "RP2040-Zero"
 		},
 		{
-			"path": "RP2040-Zero"
+			"path": "."
 		}
 	],
 	"settings": {}

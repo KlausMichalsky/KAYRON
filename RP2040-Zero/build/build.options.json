@@ -1,0 +1,9 @@
+{
+  "additionalFiles": "..\\..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..,..\\..",
+  "compiler.optimization_flags": "",
+  "customBuildProperties": "",
+  "fqbn": "rp2040:rp2040:waveshare_rp2040_zero:flash=2097152_0,freq=200,opt=Small,os=none,profile=Disabled,rtti=Disabled,stackprotect=Disabled,exceptions=Disabled,dbgport=Disabled,dbglvl=None,usbstack=picosdk,ipbtstack=ipv4only,uploadmethod=default",
+  "hardwareFolders": "C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0,C:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0",
+  "otherLibrariesFolders": "C:\\Users\\Klaus\\Documents\\Arduino\\libraries",
+  "sketchLocation": "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero"
+}
