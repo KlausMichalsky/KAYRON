@@ -1,0 +1,27 @@
+BasedOnStyle: LLVM
+
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+
+ColumnLimit: 0
+
+BreakBeforeBraces: Attach
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+
+IndentCaseLabels: true
+SpaceBeforeParens: ControlStatements
+
+AlignAfterOpenBracket: Align
+AlignOperands: true
+AlignTrailingComments: true
+
+PointerAlignment: Right
+ReferenceAlignment: Right
+
+SortIncludes: true
+
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 1

@@ -1,0 +1,34 @@
+# =======================================================================
+#                  🔹 P Y T H O N   F O R M A T 🔹
+# =======================================================================
+
+[tool.black]
+
+line-length = 88
+target-version = ["py311"]
+
+# 🔹 Indentación
+skip-string-normalization = true
+
+# 🔹 Mantener estilo limpio
+preview = false
+
+
+[tool.ruff]
+
+line-length = 88
+indent-width = 4
+
+target-version = "py311"
+
+# 🔹 Reglas básicas
+lint.select = [
+    "E",
+    "F",
+    "W"
+]
+
+# 🔹 Ignorar líneas largas manejadas por Black
+lint.ignore = [
+    "E501"
+]
