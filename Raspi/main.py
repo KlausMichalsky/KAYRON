@@ -197,9 +197,11 @@ while True:
         if board.is_capture(move):
 
             # 1. sacar pieza enemiga
-            capture_square = chess.square_name(move.to_square)
-            send_to_robot(capture_square)
-            wait_done()
+            # capture_square = chess.square_name(move.to_square)
+            # send_to_robot(f"REMOVE {capture_square}")
+            # wait_done()
+            print(
+                "⚠️ Captura detectada, pero el orden de movimientos no está implementado.")
 
             # 2. mover pieza propia
             send_to_robot(stockfish_move)
