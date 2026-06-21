@@ -281,17 +281,17 @@ void updateCaptureSequence() {
             }
             break;
 
-        // 2. Agarrar pieza
+        // 2. Agarrar pieza enemiga
         case CaptureSequenceState::PICKING:
 
             if (movingStateZ == MovingStateZ::IDLE) {
-                moveToHomeXY();
-                captureSeqState = CaptureSequenceState::MOVING_HOME;
+                moveToHomeXY(); // salir del tablero
+                captureSeqState = CaptureSequenceState::TAKE_PIECE_OUT;
             }
             break;
 
-        // 3. Ir a HOME con pieza capturada
-        case CaptureSequenceState::MOVING_HOME:
+        // 3. Sacar pieza capturada fuera (HOME con pieza)
+        case CaptureSequenceState::TAKE_PIECE_OUT:
 
             if (!xyIsMoving()) {
                 startZPlace();
@@ -303,21 +303,37 @@ void updateCaptureSequence() {
         case CaptureSequenceState::PLACING:
 
             if (movingStateZ == MovingStateZ::IDLE) {
-                COMM.println("CAPTURE DONE");
-
-                // 🔥 AQUÍ ENTRA EL NUEVO FLUJO
-                moveToHomeXY();
+                moveToHomeXY(); // limpiar zona
                 captureSeqState = CaptureSequenceState::GO_TO_FINAL_MOVE;
             }
             break;
 
-        // 5. MOVIMIENTO FINAL HACIA LA POSICIÓN DE DESTINO
+        // 5. Ir a pieza propia (antes del movimiento final)
         case CaptureSequenceState::GO_TO_FINAL_MOVE:
 
             if (!xyIsMoving()) {
-                moveToAngles(finalT1, finalT2);
+                startZPick();
+                captureSeqState = CaptureSequenceState::FINAL_PICKING;
+            }
+            break;
 
-                COMM.println("FINAL MOVE START");
+        // 6. Agarrar pieza propia
+        case CaptureSequenceState::FINAL_PICKING:
+
+            if (movingStateZ == MovingStateZ::IDLE) {
+                moveToAngles(finalT1, finalT2);
+                captureSeqState = CaptureSequenceState::GO_HOME;
+            }
+            break;
+
+        // 7. HOME FINAL
+        case CaptureSequenceState::GO_HOME:
+
+            if (!xyIsMoving()) {
+                startZPlace(); // opcional si quieres soltar pieza en destino
+                moveToHomeXY();
+
+                COMM.println("CAPTURE DONE");
 
                 captureSeqState = CaptureSequenceState::IDLE;
             }
