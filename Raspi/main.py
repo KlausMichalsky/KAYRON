@@ -213,9 +213,6 @@ while True:
             send_to_robot(f"REMOVE {capture_square}")
             wait_for("CAPTURE DONE")
 
-            send_to_robot(stockfish_move)
-            wait_for("MOVE DONE")
-
         else:
             # movimiento normal
             send_to_robot(stockfish_move)
