@@ -25,14 +25,14 @@ MovingStateZ movingStateZ = MovingStateZ::IDLE;
 // MOVIMIENTOS BASE (NO BLOQUEANTES)
 // -----------------------------------------------------------------------
 void zMoveDown() {
-    motor3.setMaxSpeed(6000);
-    motor3.setAcceleration(15000);
+    motor3.setMaxSpeed(motor3Config.fastSpeed);
+    motor3.setAcceleration(motor3Config.acceleration);
     motor3.moveTo(Z_STEPS_DOWN);
 }
 
 void zMoveUp() {
-    motor3.setMaxSpeed(6000);
-    motor3.setAcceleration(15000);
+    motor3.setMaxSpeed(motor3Config.fastSpeed);
+    motor3.setAcceleration(motor3Config.acceleration);
     motor3.moveTo(0);
 }
 

@@ -269,7 +269,7 @@ void homingStepZ(AccelStepper &motor,
 
     switch (st.state) {
         case HomingStateZ::FIND_EDGE_DOWNWARD:
-            motor.setSpeed(dir * cfg.fastSpeed);
+            motor.setSpeed(dir * cfg.slowSpeed);
             motor.runSpeed();
             if (!imanPresente) {
                 st.edge = motor.currentPosition();
