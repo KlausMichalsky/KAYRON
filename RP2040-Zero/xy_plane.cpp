@@ -184,18 +184,6 @@ void startMoveSequence(float s1, float s2, float e1, float e2) {
 
     moveSeqState = MoveSequenceState::MOVING_START;
 
-    COMM.print("START T1=");
-    COMM.println(s1);
-
-    COMM.print("START T2=");
-    COMM.println(s2);
-
-    COMM.print("END T1=");
-    COMM.println(e1);
-
-    COMM.print("END T2=");
-    COMM.println(e2);
-
     moveToAngles(startT1, startT2);
 }
 
@@ -207,7 +195,7 @@ void startCaptureSequence(float captureT1_, float captureT2_, float finalT1_, fl
     finalT1 = finalT1_;
     finalT2 = finalT2_;
 
-    captureSeqState = CaptureSequenceState::MOVING_TO_CAPTURE;
+    captureSeqState = CaptureSequenceState::CAPTURE_START;
 
     moveToAngles(captureT1, captureT2);
 }
@@ -272,16 +260,16 @@ void updateMoveSequence() {
 void updateCaptureSequence() {
     switch (captureSeqState) {
         // 1. Ir a pieza enemiga
-        case CaptureSequenceState::MOVING_TO_CAPTURE:
+        case CaptureSequenceState::CAPTURE_START:
 
             if (movingStateXY == MovingStateXY::IDLE) {
                 startZPick();
-                captureSeqState = CaptureSequenceState::PICKING;
+                captureSeqState = CaptureSequenceState::PICKING_OPPONENT;
             }
             break;
 
         // 2. Agarrar pieza
-        case CaptureSequenceState::PICKING:
+        case CaptureSequenceState::PICKING_OPPONENT:
 
             if (movingStateZ == MovingStateZ::IDLE) {
                 moveToHomeXY();
@@ -294,30 +282,56 @@ void updateCaptureSequence() {
 
             if (!xyIsMoving()) {
                 startZPlace();
-                captureSeqState = CaptureSequenceState::PLACING;
+                captureSeqState = CaptureSequenceState::PLACING_OPPONENT;
             }
             break;
 
         // 4. Soltar pieza capturada
-        case CaptureSequenceState::PLACING:
+        case CaptureSequenceState::PLACING_OPPONENT:
 
             if (movingStateZ == MovingStateZ::IDLE) {
                 COMM.println("CAPTURE DONE");
 
                 // 🔥 AQUÍ ENTRA EL NUEVO FLUJO
                 moveToHomeXY();
-                captureSeqState = CaptureSequenceState::GO_TO_FINAL_MOVE;
+                captureSeqState = CaptureSequenceState::MOVING_OWN_PIECE_START;
             }
             break;
 
-        // 5. MOVIMIENTO FINAL HACIA LA POSICIÓN DE DESTINO
-        case CaptureSequenceState::GO_TO_FINAL_MOVE:
+        // 5. MOVIMIENTO FINAL DE LA PIEZA PROPIA
+        case CaptureSequenceState::MOVING_OWN_PIECE_START:
 
             if (!xyIsMoving()) {
                 moveToAngles(finalT1, finalT2);
 
                 COMM.println("FINAL MOVE START");
 
+                captureSeqState = CaptureSequenceState::PICKING_OWN_PIECE;
+            }
+            break;
+
+        case CaptureSequenceState::PICKING_OWN_PIECE:
+            if (movingStateXY == MovingStateXY::IDLE) {
+                startZPick();
+                captureSeqState = CaptureSequenceState::MOVING_OWN_PIECE_END;
+            }
+
+        case CaptureSequenceState::MOVING_OWN_PIECE_END:
+            if (!xyIsMoving()) {
+                moveToAngles(captureT1, captureT2);
+                captureSeqState = CaptureSequenceState::PLACING_OWN_PIECE;
+            }
+
+        case CaptureSequenceState::PLACING_OWN_PIECE:
+            if (movingStateXY == MovingStateXY::IDLE) {
+                startZPlace();
+                captureSeqState = CaptureSequenceState::GO_HOME;
+            }
+            break;
+
+        case CaptureSequenceState::GO_HOME:
+            if (movingStateZ == MovingStateZ::IDLE) {
+                moveToHomeXY();
                 captureSeqState = CaptureSequenceState::IDLE;
             }
             break;

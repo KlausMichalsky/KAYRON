@@ -187,12 +187,14 @@ enum class MoveSequenceState {
 // Maquina de estados para secuencia de captura completa
 enum class CaptureSequenceState {
     IDLE,
-    MOVING_TO_CAPTURE,
-    PICKING,
+    CAPTURE_START,
+    PICKING_OPPONENT,
     TAKE_PIECE_OUT,
-    PLACING,
-    GO_TO_FINAL_MOVE,
-    FINAL_PICKING,
+    PLACING_OPPONENT,
+    MOVING_OWN_PIECE_START,
+    PICKING_OWN_PIECE,
+    MOVING_OWN_PIECE_END,
+    PLACING_OWN_PIECE,
     GO_HOME
 };
 
