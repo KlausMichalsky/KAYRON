@@ -130,14 +130,12 @@ def shutdown():
         pass
 
 
-def wait_for(expected):
+def wait_any(*expected):
     while True:
         line = ser.readline().decode(errors="ignore").strip()
-
         if line:
             print("RP2040:", line)
-
-            if line == expected:
+            if any(e in line for e in expected):
                 return
 
 # =========================
@@ -214,7 +212,8 @@ while True:
             send_to_robot(f"REMOVE {capture_square} {from_square}")
 
             # 🔥 SOLO esperar final real del sistema completo
-            wait_for("MOVE DONE")   # o "CAPTURE DONE + FINAL DONE" mejor aún
+            # o "CAPTURE DONE + FINAL DONE" mejor aún
+            wait_any("MOVE DONE", "CAPTURE DONE")
 
             print("✅ Captura completada")
 
