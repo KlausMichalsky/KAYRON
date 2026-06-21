@@ -200,8 +200,6 @@ while True:
             capture_square = chess.square_name(move.to_square)
             send_to_robot(f"REMOVE {capture_square}")
             wait_done()
-            print(
-                "⚠️ Captura detectada, pero el orden de movimientos no está implementado.")
 
             # 2. mover pieza propia
             send_to_robot(stockfish_move)
