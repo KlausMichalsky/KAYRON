@@ -179,7 +179,8 @@ enum class MoveSequenceState {
     MOVING_START,
     PICKING,
     MOVING_END,
-    PLACING
+    PLACING,
+    GO_HOME
 };
 
 // Maquina de estados para secuencia de captura completa
@@ -222,7 +223,7 @@ inline const MotorConfig motor1Config = {
     .stepsPerRevolution = MOTOR_STEPS,
     .motorDirection = -1, // ‼️ -1 porque el motor/sensor esta fisicamente montado al revez
     .slowSpeed = 2 * 800.0,
-    .fastSpeed = 3 * 1500.0,
+    .fastSpeed = 4 * 1500.0,
     .steps90Deg = MOTOR1_MICROSTEPPING * MOTOR_STEPS / 4,
     .stepsLimit = 0, // no existe para motor1
     .timeout = 15000,
@@ -236,7 +237,7 @@ inline const MotorConfig motor2Config = {
     .stepsPerRevolution = MOTOR_STEPS,
     .motorDirection = 1,
     .slowSpeed = 2 * 533.0,
-    .fastSpeed = 3 * 1000.0,
+    .fastSpeed = 4 * 1000.0,
     .steps90Deg = MOTOR2_MICROSTEPPING * MOTOR_STEPS / 4,
     .stepsLimit = 0, // no existe para motor2
     .timeout = 15000,
@@ -250,7 +251,7 @@ inline const MotorConfig motor3Config = {
     .stepsPerRevolution = 200,
     .motorDirection = 1,
     .slowSpeed = 2500.0,
-    .fastSpeed = 4500.0,
+    .fastSpeed = 5000.0,
     .steps90Deg = 0,    // no existe para motor3
     .stepsLimit = -100, // pasos máximos si arranca fuera del imán (solo motor3)
     .timeout = 12000,

@@ -206,16 +206,21 @@ while True:
         # =========================
         # CAPTURA: ORDEN CORRECTO
         # =========================
+
+        # =========================
+        # CAPTURA
+        # =========================
         if board.is_capture(move):
 
-            # 1. sacar pieza enemiga
             capture_square = chess.square_name(move.to_square)
             send_to_robot(f"REMOVE {capture_square}")
+
+            # 🔥 ahora esperamos MOVE FINAL del robot
             wait_for("CAPTURE DONE")
-            print("✅ Pieza enemiga removida")
+
+            print("✅ Captura completada")
 
         else:
-            # movimiento normal
             send_to_robot(stockfish_move)
             wait_done()
 

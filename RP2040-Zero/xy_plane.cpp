@@ -238,13 +238,22 @@ void updateMoveSequence() {
             }
             break;
 
-        // 4. Finalizado (esperar Place terminado)
+        // 4. Esperar final de Z PLACE
         case MoveSequenceState::PLACING:
 
             if (movingStateZ == MovingStateZ::IDLE) {
-                moveSeqState = MoveSequenceState::IDLE;
                 COMM.println("MOVE DONE");
-                moveToHomeXY(); // 👈 VOLVER A CERO
+                moveSeqState = MoveSequenceState::GO_HOME;
+            }
+            break;
+
+        // 5. IR A HOME (nuevo estado limpio)
+        case MoveSequenceState::GO_HOME:
+
+            if (!xyIsMoving()) {
+                moveToHomeXY(); // 👉 ahora sí HOME real controlado
+                COMM.println("GO HOME START");
+                moveSeqState = MoveSequenceState::IDLE;
             }
             break;
 

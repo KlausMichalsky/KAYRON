@@ -167,7 +167,7 @@ void processCommand(const String &cmdStr) {
 
         case Command::HOME:
             moveToHomeXY();
-            COMM.println("HOME DONE"); // 👈 ESTO ES CLAVE
+            // COMM.println("HOME DONE"); // NO HOME DONE AQUI (esperar a que el movimiento termine para mandar el mensaje)
             break;
 
         case Command::HOMING:
