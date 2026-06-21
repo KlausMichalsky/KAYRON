@@ -187,16 +187,34 @@ while True:
         ser.reset_input_buffer()
 
         stockfish_move = get_best_move()
+        move = chess.Move.from_uci(stockfish_move)
 
         print("🤖 Stockfish:", stockfish_move)
 
-        send_to_robot(stockfish_move)
-        wait_done()
+        # =========================
+        # CAPTURA: ORDEN CORRECTO
+        # =========================
+        if board.is_capture(move):
 
+            # 1. sacar pieza enemiga
+            capture_square = chess.square_name(move.to_square)
+            send_to_robot(f"REMOVE {capture_square}")
+            wait_done()
+
+            # 2. mover pieza propia
+            send_to_robot(stockfish_move)
+            wait_done()
+
+        else:
+            # movimiento normal
+            send_to_robot(stockfish_move)
+            wait_done()
+
+        # volver a home SIEMPRE al final
         send_to_robot("HOME")
         wait_done()
 
-        board.push(chess.Move.from_uci(stockfish_move))
+        board.push(move)
 
         human_turn = True
 
