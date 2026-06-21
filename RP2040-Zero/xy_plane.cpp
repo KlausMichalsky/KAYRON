@@ -280,16 +280,16 @@ void updateCaptureSequence() {
             }
             break;
 
-        // 2. Agarrar pieza enemiga
+        // 2. Agarrar pieza
         case CaptureSequenceState::PICKING:
 
             if (movingStateZ == MovingStateZ::IDLE) {
-                moveToHomeXY(); // salir del tablero
+                moveToHomeXY();
                 captureSeqState = CaptureSequenceState::TAKE_PIECE_OUT;
             }
             break;
 
-        // 3. Sacar pieza capturada fuera (HOME con pieza)
+        // 3. Ir a HOME con pieza capturada
         case CaptureSequenceState::TAKE_PIECE_OUT:
 
             if (!xyIsMoving()) {
@@ -302,37 +302,21 @@ void updateCaptureSequence() {
         case CaptureSequenceState::PLACING:
 
             if (movingStateZ == MovingStateZ::IDLE) {
-                moveToHomeXY(); // limpiar zona
+                COMM.println("CAPTURE DONE");
+
+                // 🔥 AQUÍ ENTRA EL NUEVO FLUJO
+                moveToHomeXY();
                 captureSeqState = CaptureSequenceState::GO_TO_FINAL_MOVE;
             }
             break;
 
-        // 5. Ir a pieza propia (antes del movimiento final)
+        // 5. MOVIMIENTO FINAL HACIA LA POSICIÓN DE DESTINO
         case CaptureSequenceState::GO_TO_FINAL_MOVE:
 
             if (!xyIsMoving()) {
-                startZPick();
-                captureSeqState = CaptureSequenceState::FINAL_PICKING;
-            }
-            break;
-
-        // 6. Agarrar pieza propia
-        case CaptureSequenceState::FINAL_PICKING:
-
-            if (movingStateZ == MovingStateZ::IDLE) {
                 moveToAngles(finalT1, finalT2);
-                captureSeqState = CaptureSequenceState::GO_HOME;
-            }
-            break;
 
-        // 7. HOME FINAL
-        case CaptureSequenceState::GO_HOME:
-
-            if (!xyIsMoving()) {
-                startZPlace(); // opcional si quieres soltar pieza en destino
-                moveToHomeXY();
-
-                COMM.println("CAPTURE DONE");
+                COMM.println("FINAL MOVE START");
 
                 captureSeqState = CaptureSequenceState::IDLE;
             }
