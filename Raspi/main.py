@@ -216,9 +216,6 @@ while True:
             send_to_robot(stockfish_move)
             wait_for("MOVE DONE")
 
-            send_to_robot("HOME")
-            wait_for("HOME DONE")
-
         else:
             # movimiento normal
             send_to_robot(stockfish_move)

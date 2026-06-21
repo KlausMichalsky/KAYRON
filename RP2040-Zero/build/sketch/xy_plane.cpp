@@ -258,11 +258,11 @@ void updateMoveSequence() {
 
 void updateCaptureSequence() {
     switch (captureSeqState) {
-        // 1. Ir a pieza enemiga
+            // 1. Ir a pieza enemiga
         case CaptureSequenceState::MOVING_TO_CAPTURE:
 
-            if (!xyIsMoving()) {
-                startZPick(); // 🔥 agarrar pieza
+            if (movingStateXY == MovingStateXY::IDLE) {
+                startZPick();
                 captureSeqState = CaptureSequenceState::PICKING;
             }
             break;
