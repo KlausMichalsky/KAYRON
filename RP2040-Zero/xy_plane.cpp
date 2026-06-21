@@ -262,13 +262,13 @@ void updateCaptureSequence() {
         // 1. Ir a pieza enemiga
         case CaptureSequenceState::CAPTURE_START:
 
-            if (movingStateXY == MovingStateXY::IDLE) {
+            if (!xyIsMoving()) {
                 startZPick();
                 captureSeqState = CaptureSequenceState::PICKING_OPPONENT;
             }
             break;
 
-        // 2. Agarrar pieza
+        // 2. Esperar pick enemigo
         case CaptureSequenceState::PICKING_OPPONENT:
 
             if (movingStateZ == MovingStateZ::IDLE) {
@@ -277,7 +277,7 @@ void updateCaptureSequence() {
             }
             break;
 
-        // 3. Ir a HOME con pieza capturada
+        // 3. Sacar pieza
         case CaptureSequenceState::TAKE_PIECE_OUT:
 
             if (!xyIsMoving()) {
@@ -286,52 +286,56 @@ void updateCaptureSequence() {
             }
             break;
 
-        // 4. Soltar pieza capturada
+        // 4. Esperar place enemigo
         case CaptureSequenceState::PLACING_OPPONENT:
 
             if (movingStateZ == MovingStateZ::IDLE) {
                 COMM.println("CAPTURE DONE");
 
-                // 🔥 AQUÍ ENTRA EL NUEVO FLUJO
                 moveToHomeXY();
                 captureSeqState = CaptureSequenceState::MOVING_OWN_PIECE_START;
             }
             break;
 
-        // 5. MOVIMIENTO FINAL DE LA PIEZA PROPIA
+        // 5. Ir a pieza propia (XY)
         case CaptureSequenceState::MOVING_OWN_PIECE_START:
 
             if (!xyIsMoving()) {
                 moveToAngles(finalT1, finalT2);
-
-                COMM.println("FINAL MOVE START");
-
                 captureSeqState = CaptureSequenceState::PICKING_OWN_PIECE;
             }
             break;
 
+        // 6. Esperar llegada a pieza propia
         case CaptureSequenceState::PICKING_OWN_PIECE:
-            if (movingStateXY == MovingStateXY::IDLE) {
+
+            if (!xyIsMoving()) {
                 startZPick();
                 captureSeqState = CaptureSequenceState::MOVING_OWN_PIECE_END;
             }
             break;
 
+        // 7. Mover pieza propia a destino
         case CaptureSequenceState::MOVING_OWN_PIECE_END:
-            if (!xyIsMoving()) {
+
+            if (movingStateZ == MovingStateZ::IDLE) {
                 moveToAngles(captureT1, captureT2);
                 captureSeqState = CaptureSequenceState::PLACING_OWN_PIECE;
             }
             break;
 
+        // 8. Esperar llegada a destino
         case CaptureSequenceState::PLACING_OWN_PIECE:
-            if (movingStateXY == MovingStateXY::IDLE) {
+
+            if (!xyIsMoving()) {
                 startZPlace();
                 captureSeqState = CaptureSequenceState::GO_HOME;
             }
             break;
 
+        // 9. HOME final
         case CaptureSequenceState::GO_HOME:
+
             if (movingStateZ == MovingStateZ::IDLE) {
                 moveToHomeXY();
                 captureSeqState = CaptureSequenceState::IDLE;
