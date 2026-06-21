@@ -203,30 +203,24 @@ while True:
 
         print("🤖 Stockfish:", stockfish_move)
 
-        # =========================
-        # CAPTURA: ORDEN CORRECTO
-        # =========================
-
-        # =========================
+        # =====================
         # CAPTURA
-        # =========================
+        # =====================
         if board.is_capture(move):
 
             capture_square = chess.square_name(move.to_square)
-            send_to_robot(f"REMOVE {capture_square}")
+            from_square = chess.square_name(move.from_square)
 
-            # 🔥 ahora esperamos MOVE FINAL del robot
-            wait_for("CAPTURE DONE")
+            send_to_robot(f"REMOVE {capture_square} {from_square}")
+
+            # 🔥 SOLO esperar final real del sistema completo
+            wait_for("MOVE DONE")   # o "CAPTURE DONE + FINAL DONE" mejor aún
 
             print("✅ Captura completada")
 
         else:
             send_to_robot(stockfish_move)
             wait_done()
-
-        # volver a home SIEMPRE al final
-        send_to_robot("HOME")
-        wait_done()
 
         board.push(move)
 

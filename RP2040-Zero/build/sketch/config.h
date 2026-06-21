@@ -180,7 +180,8 @@ enum class MoveSequenceState {
     MOVING_START,
     PICKING,
     MOVING_END,
-    PLACING
+    PLACING,
+    GO_HOME
 };
 
 // Maquina de estados para secuencia de captura completa
@@ -189,7 +190,8 @@ enum class CaptureSequenceState {
     MOVING_TO_CAPTURE,
     PICKING,
     MOVING_HOME,
-    PLACING
+    PLACING,
+    GO_TO_FINAL_MOVE
 };
 
 // ESTRUCTURAS DE CONFIGURACIÓN DE MOTORES

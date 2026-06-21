@@ -168,7 +168,7 @@ void processCommand(const String &cmdStr) {
 
         case Command::HOME:
             moveToHomeXY();
-            COMM.println("HOME DONE"); // 👈 ESTO ES CLAVE
+            // COMM.println("HOME DONE"); // NO HOME DONE AQUI (esperar a que el movimiento termine para mandar el mensaje)
             break;
 
         case Command::HOMING:
@@ -215,25 +215,34 @@ void processCommand(const String &cmdStr) {
         }
 
         case Command::REMOVE: {
-            char square[4] = {0};
+            char captureSquare[4] = {0};
+            char finalSquare[4] = {0};
 
             int parsed = sscanf(trimmedCmd.c_str(),
-                                "REMOVE %3s",
-                                square);
+                                "REMOVE %3s %3s",
+                                captureSquare,
+                                finalSquare);
 
-            if (parsed != 1) {
+            if (parsed != 2) {
                 COMM.println("ERROR");
                 break;
             }
 
-            float theta1, theta2;
+            float capT1, capT2;
+            float finT1, finT2;
 
-            if (!chessSquareToAngles(String(square), theta1, theta2)) {
-                COMM.println("ERROR");
+            if (!chessSquareToAngles(String(captureSquare), capT1, capT2)) {
+                COMM.println("ERROR CAPTURE");
                 break;
             }
 
-            startCaptureSequence(theta1, theta2);
+            if (!chessSquareToAngles(String(finalSquare), finT1, finT2)) {
+                COMM.println("ERROR FINAL");
+                break;
+            }
+
+            // 🔥 ahora sí: captura + movimiento final en FSM
+            startCaptureSequence(capT1, capT2, finT1, finT2);
 
             COMM.println("REMOVE STARTED");
             break;

@@ -44,10 +44,27 @@ void coreUpdate() {
         return;
     }
 
-    updateXY();           // 1. ejecuta movimiento físico XY
-    updateZ();            // 2. ejecuta movimiento físico Z
-    updateMoveSequence(); // 3. decide qué hacer después
-    updateCaptureSequence();
+    void coreUpdate() {
+        if (homeAllState != HomeAllState::IDLE) {
+            coreHomeAll();
+            return;
+        }
+
+        if (homeSingleState != HomeSingleState::IDLE) {
+            coreHomeSingleMotor();
+            return;
+        }
+
+        updateXY();
+        updateZ();
+
+        // 🔥 SOLO UNA STATE MACHINE ACTIVA
+        if (captureSeqState != CaptureSequenceState::IDLE) {
+            updateCaptureSequence();
+        } else if (moveSeqState != MoveSequenceState::IDLE) {
+            updateMoveSequence();
+        }
+    }
     // ...otras tareas
 }
 

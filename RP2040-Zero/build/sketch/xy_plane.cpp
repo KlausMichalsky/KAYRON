@@ -39,6 +39,8 @@ float endT1 = 0;
 float endT2 = 0;
 float captureT1 = 0;
 float captureT2 = 0;
+static float finalT1 = 0;
+static float finalT2 = 0;
 
 extern float currentShoulderAngle;
 extern float currentElbowAngle;
@@ -200,14 +202,17 @@ void startMoveSequence(float s1, float s2, float e1, float e2) {
 
 // INICIAR SECUENCIA DE CAPTURA COMPLETA (XY → Z → HOME)
 // -----------------------------------------------------------------------
-void startCaptureSequence(float t1, float t2) {
-    captureT1 = t1;
-    captureT2 = t2;
+void startCaptureSequence(float captureT1_, float captureT2_, float finalT1_, float finalT2_) {
+    captureT1 = captureT1_;
+    captureT2 = captureT2_;
+    finalT1 = finalT1_;
+    finalT2 = finalT2_;
 
     captureSeqState = CaptureSequenceState::MOVING_TO_CAPTURE;
 
     moveToAngles(captureT1, captureT2);
 }
+
 // MAQUINA DE ESTADOS PARA SECUENCIA DE MOVIMIENTO COMPLETA (START → XY → Z → XY → Z)
 // -----------------------------------------------------------------------
 void updateMoveSequence() {
@@ -239,13 +244,22 @@ void updateMoveSequence() {
             }
             break;
 
-        // 4. Finalizado (esperar Place terminado)
+        // 4. Esperar final de Z PLACE
         case MoveSequenceState::PLACING:
 
             if (movingStateZ == MovingStateZ::IDLE) {
-                moveSeqState = MoveSequenceState::IDLE;
                 COMM.println("MOVE DONE");
-                moveToHomeXY(); // 👈 VOLVER A CERO
+                moveSeqState = MoveSequenceState::GO_HOME;
+            }
+            break;
+
+        // 5. IR A HOME (nuevo estado limpio)
+        case MoveSequenceState::GO_HOME:
+
+            if (!xyIsMoving()) {
+                moveToHomeXY(); // 👉 ahora sí HOME real controlado
+                COMM.println("GO HOME START");
+                moveSeqState = MoveSequenceState::IDLE;
             }
             break;
 
@@ -258,7 +272,7 @@ void updateMoveSequence() {
 
 void updateCaptureSequence() {
     switch (captureSeqState) {
-            // 1. Ir a pieza enemiga
+        // 1. Ir a pieza enemiga
         case CaptureSequenceState::MOVING_TO_CAPTURE:
 
             if (movingStateXY == MovingStateXY::IDLE) {
@@ -267,33 +281,45 @@ void updateCaptureSequence() {
             }
             break;
 
-        // 2. Esperar agarre
+        // 2. Agarrar pieza
         case CaptureSequenceState::PICKING:
 
             if (movingStateZ == MovingStateZ::IDLE) {
-                moveToHomeXY(); // 🏠 ir a home con pieza
+                moveToHomeXY();
                 captureSeqState = CaptureSequenceState::MOVING_HOME;
             }
             break;
 
-        // 3. Llegar a HOME
+        // 3. Ir a HOME con pieza capturada
         case CaptureSequenceState::MOVING_HOME:
 
             if (!xyIsMoving()) {
-                startZPlace(); // 🔥 soltar pieza en zona de captura
+                startZPlace();
                 captureSeqState = CaptureSequenceState::PLACING;
             }
             break;
 
-            // 4. Soltar pieza
+        // 4. Soltar pieza capturada
         case CaptureSequenceState::PLACING:
 
             if (movingStateZ == MovingStateZ::IDLE) {
+                COMM.println("CAPTURE DONE");
+
+                // 🔥 AQUÍ ENTRA EL NUEVO FLUJO
                 moveToHomeXY();
+                captureSeqState = CaptureSequenceState::GO_TO_FINAL_MOVE;
+            }
+            break;
+
+        // 5. MOVIMIENTO FINAL HACIA LA POSICIÓN DE DESTINO
+        case CaptureSequenceState::GO_TO_FINAL_MOVE:
+
+            if (!xyIsMoving()) {
+                moveToAngles(finalT1, finalT2);
+
+                COMM.println("FINAL MOVE START");
 
                 captureSeqState = CaptureSequenceState::IDLE;
-
-                COMM.println("CAPTURE DONE");
             }
             break;
 

@@ -189,7 +189,8 @@ enum class CaptureSequenceState {
     MOVING_TO_CAPTURE,
     PICKING,
     MOVING_HOME,
-    PLACING
+    PLACING,
+    GO_TO_FINAL_MOVE
 };
 
 // ESTRUCTURAS DE CONFIGURACIÓN DE MOTORES
