@@ -316,12 +316,14 @@ void updateCaptureSequence() {
                 startZPick();
                 captureSeqState = CaptureSequenceState::MOVING_OWN_PIECE_END;
             }
+            break;
 
         case CaptureSequenceState::MOVING_OWN_PIECE_END:
             if (!xyIsMoving()) {
                 moveToAngles(captureT1, captureT2);
                 captureSeqState = CaptureSequenceState::PLACING_OWN_PIECE;
             }
+            break;
 
         case CaptureSequenceState::PLACING_OWN_PIECE:
             if (movingStateXY == MovingStateXY::IDLE) {
