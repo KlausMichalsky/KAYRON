@@ -32,7 +32,7 @@ THINK_TIME = 0.1
 # INIT SERIAL
 # =========================
 
-print("🤖 Iniciando ZERO-CHESS...")
+print("🤖 Iniciando KAYRON...")
 
 ser = serial.Serial(SERIAL_PORT, BAUDRATE, timeout=1)
 
@@ -197,9 +197,9 @@ while True:
         if board.is_capture(move):
 
             # 1. sacar pieza enemiga
-            # capture_square = chess.square_name(move.to_square)
-            # send_to_robot(f"REMOVE {capture_square}")
-            # wait_done()
+            capture_square = chess.square_name(move.to_square)
+            send_to_robot(f"REMOVE {capture_square}")
+            wait_done()
             print(
                 "⚠️ Captura detectada, pero el orden de movimientos no está implementado.")
 
