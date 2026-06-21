@@ -96,6 +96,7 @@ enum class Command {
     HOME,
     HOMING,
     MOVE,
+    REMOVE,
     SQUARE,
     UNKNOWN
 };
@@ -167,7 +168,6 @@ enum class MovingStateZ {
     PICK_DOWN,
     PICK_GRIP,
     PICK_UP,
-
     PLACE_DOWN,
     PLACE_RELEASE,
     PLACE_UP
@@ -179,6 +179,15 @@ enum class MoveSequenceState {
     MOVING_START,
     PICKING,
     MOVING_END,
+    PLACING
+};
+
+// Maquina de estados para secuencia de captura completa
+enum class CaptureSequenceState {
+    IDLE,
+    MOVING_TO_CAPTURE,
+    PICKING,
+    MOVING_HOME,
     PLACING
 };
 

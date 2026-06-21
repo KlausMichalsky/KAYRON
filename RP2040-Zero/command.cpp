@@ -102,6 +102,8 @@ Command parseCommand(const String &cmd) {
         return Command::HOMING;
     else if (cmd.startsWith("MOVE"))
         return Command::MOVE;
+    else if (cmd.startsWith("REMOVE"))
+        return Command::REMOVE;
     else if (cmd.startsWith("SQUARE"))
         return Command::SQUARE;
     else
@@ -208,6 +210,31 @@ void processCommand(const String &cmdStr) {
             // SOLO UNA LLAMADA
             startMoveSequence(s1, s2, e1, e2);
 
+            break;
+        }
+
+        case Command::REMOVE: {
+            char square[4] = {0};
+
+            int parsed = sscanf(trimmedCmd.c_str(),
+                                "REMOVE %3s",
+                                square);
+
+            if (parsed != 1) {
+                COMM.println("ERROR");
+                break;
+            }
+
+            float theta1, theta2;
+
+            if (!chessSquareToAngles(String(square), theta1, theta2)) {
+                COMM.println("ERROR");
+                break;
+            }
+
+            startCaptureSequence(theta1, theta2);
+
+            COMM.println("REMOVE STARTED");
             break;
         }
 

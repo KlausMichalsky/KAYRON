@@ -26,5 +26,7 @@ bool xyIsMoving();
 void printDebugMove(float motor1Angle, float motor2Angle);
 void correctErrorOnce();
 void startMoveSequence(float s1, float s2, float e1, float e2);
+void startCaptureSequence(float theta1, float theta2);
+void updateCaptureSequence();
 void resetXYState();
 void cancelMoveSequence();

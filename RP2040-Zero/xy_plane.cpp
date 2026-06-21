@@ -30,11 +30,14 @@ static unsigned long settleStart = 0;
 // -----------------------------------------------------------------------
 MovingStateXY movingStateXY = MovingStateXY::IDLE;
 MoveSequenceState moveSeqState = MoveSequenceState::IDLE;
+CaptureSequenceState captureSeqState = CaptureSequenceState::IDLE;
 
 float startT1 = 0;
 float startT2 = 0;
 float endT1 = 0;
 float endT2 = 0;
+float captureT1 = 0;
+float captureT2 = 0;
 
 extern float currentShoulderAngle;
 extern float currentElbowAngle;
@@ -182,6 +185,16 @@ void startMoveSequence(float s1, float s2, float e1, float e2) {
     moveToAngles(startT1, startT2);
 }
 
+// INICIAR SECUENCIA DE CAPTURA COMPLETA (XY → Z → HOME)
+// -----------------------------------------------------------------------
+void startCaptureSequence(float t1, float t2) {
+    captureT1 = t1;
+    captureT2 = t2;
+
+    captureSeqState = CaptureSequenceState::MOVING_TO_CAPTURE;
+
+    moveToAngles(captureT1, captureT2);
+}
 // MAQUINA DE ESTADOS PARA SECUENCIA DE MOVIMIENTO COMPLETA (START → XY → Z → XY → Z)
 // -----------------------------------------------------------------------
 void updateMoveSequence() {
@@ -225,6 +238,53 @@ void updateMoveSequence() {
 
         // IDLE
         case MoveSequenceState::IDLE:
+        default:
+            break;
+    }
+}
+
+void updateCaptureSequence() {
+    switch (captureSeqState) {
+        // 1. Ir a pieza enemiga
+        case CaptureSequenceState::MOVING_TO_CAPTURE:
+
+            if (!xyIsMoving()) {
+                startZPick(); // 🔥 agarrar pieza
+                captureSeqState = CaptureSequenceState::PICKING;
+            }
+            break;
+
+        // 2. Esperar agarre
+        case CaptureSequenceState::PICKING:
+
+            if (movingStateZ == MovingStateZ::IDLE) {
+                moveToHomeXY(); // 🏠 ir a home con pieza
+                captureSeqState = CaptureSequenceState::MOVING_HOME;
+            }
+            break;
+
+        // 3. Llegar a HOME
+        case CaptureSequenceState::MOVING_HOME:
+
+            if (!xyIsMoving()) {
+                startZPlace(); // 🔥 soltar pieza en zona de captura
+                captureSeqState = CaptureSequenceState::PLACING;
+            }
+            break;
+
+            // 4. Soltar pieza
+        case CaptureSequenceState::PLACING:
+
+            if (movingStateZ == MovingStateZ::IDLE) {
+                moveToHomeXY();
+
+                captureSeqState = CaptureSequenceState::IDLE;
+
+                COMM.println("CAPTURE DONE");
+            }
+            break;
+
+        case CaptureSequenceState::IDLE:
         default:
             break;
     }
@@ -299,6 +359,7 @@ void resetXYState() {
 
     movingStateXY = MovingStateXY::IDLE;
     moveSeqState = MoveSequenceState::IDLE;
+    captureSeqState = CaptureSequenceState::IDLE;
 
     // =========================
     // RESET DE TARGETS
@@ -311,6 +372,8 @@ void resetXYState() {
     startT2 = 0;
     endT1 = 0;
     endT2 = 0;
+    captureT1 = 0;
+    captureT2 = 0;
 
     // =========================
     // RESET DE TIEMPOS
@@ -331,6 +394,7 @@ void resetXYState() {
 void cancelMoveSequence() {
     // parar máquina de estados
     moveSeqState = MoveSequenceState::IDLE;
+    captureSeqState = CaptureSequenceState::IDLE;
 
     // parar XY inmediatamente
     motor1.stop();
@@ -341,6 +405,8 @@ void cancelMoveSequence() {
     startT2 = 0;
     endT1 = 0;
     endT2 = 0;
+    captureT1 = 0;
+    captureT2 = 0;
 
     // opcional: reset estado XY también
     movingStateXY = MovingStateXY::IDLE;
