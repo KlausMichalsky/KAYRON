@@ -182,6 +182,18 @@ void startMoveSequence(float s1, float s2, float e1, float e2) {
 
     moveSeqState = MoveSequenceState::MOVING_START;
 
+    COMM.print("START T1=");
+    COMM.println(s1);
+
+    COMM.print("START T2=");
+    COMM.println(s2);
+
+    COMM.print("END T1=");
+    COMM.println(e1);
+
+    COMM.print("END T2=");
+    COMM.println(e2);
+
     moveToAngles(startT1, startT2);
 }
 

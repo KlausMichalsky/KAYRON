@@ -129,6 +129,17 @@ def shutdown():
     except:
         pass
 
+
+def wait_for(expected):
+    while True:
+        line = ser.readline().decode(errors="ignore").strip()
+
+        if line:
+            print("RP2040:", line)
+
+            if line == expected:
+                return
+
 # =========================
 # START
 # =========================
@@ -142,6 +153,7 @@ mode = input("¿Quién empieza? (1=Humano, 2=Robot): ").strip()
 human_turn = (mode == "1")
 
 print("\n♟️ Iniciando partida...\n")
+
 
 # =========================
 # LOOP PRINCIPAL
@@ -199,11 +211,13 @@ while True:
             # 1. sacar pieza enemiga
             capture_square = chess.square_name(move.to_square)
             send_to_robot(f"REMOVE {capture_square}")
-            wait_done()
+            wait_for("CAPTURE DONE")
 
-            # 2. mover pieza propia
             send_to_robot(stockfish_move)
-            wait_done()
+            wait_for("MOVE DONE")
+
+            send_to_robot("HOME")
+            wait_for("HOME DONE")
 
         else:
             # movimiento normal

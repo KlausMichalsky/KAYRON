@@ -103,6 +103,8 @@ Command parseCommand(const String &cmd) {
         return Command::HOMING;
     else if (cmd.startsWith("MOVE"))
         return Command::MOVE;
+    else if (cmd.startsWith("REMOVE"))
+        return Command::REMOVE;
     else if (cmd.startsWith("SQUARE"))
         return Command::SQUARE;
     else
@@ -212,6 +214,31 @@ void processCommand(const String &cmdStr) {
             break;
         }
 
+        case Command::REMOVE: {
+            char square[4] = {0};
+
+            int parsed = sscanf(trimmedCmd.c_str(),
+                                "REMOVE %3s",
+                                square);
+
+            if (parsed != 1) {
+                COMM.println("ERROR");
+                break;
+            }
+
+            float theta1, theta2;
+
+            if (!chessSquareToAngles(String(square), theta1, theta2)) {
+                COMM.println("ERROR");
+                break;
+            }
+
+            startCaptureSequence(theta1, theta2);
+
+            COMM.println("REMOVE STARTED");
+            break;
+        }
+
         default: {
             // ==========================================================
             // 🧠 NUEVO: soporte para Stockfish (UCI: e2e4)
@@ -240,6 +267,12 @@ void processCommand(const String &cmdStr) {
 
                 COMM.print("OK:");
                 COMM.println(trimmedCmd);
+
+                COMM.print("START=");
+                COMM.println(startSquare);
+
+                COMM.print("END=");
+                COMM.println(endSquare);
 
                 startMoveSequence(s1, s2, e1, e2);
 

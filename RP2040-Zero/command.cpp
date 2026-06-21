@@ -267,6 +267,12 @@ void processCommand(const String &cmdStr) {
                 COMM.print("OK:");
                 COMM.println(trimmedCmd);
 
+                COMM.print("START=");
+                COMM.println(startSquare);
+
+                COMM.print("END=");
+                COMM.println(endSquare);
+
                 startMoveSequence(s1, s2, e1, e2);
 
                 break;
