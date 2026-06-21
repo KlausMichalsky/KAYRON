@@ -67,9 +67,9 @@
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\variants\\waveshare_rp2040_zero",
         "-IC:\\Users\\Klaus\\AppData\\Local\\Arduino15\\packages\\rp2040\\hardware\\rp2040\\5.6.0\\libraries\\Wire\\src",
         "-IC:\\Users\\Klaus\\Documents\\Arduino\\libraries\\AccelStepper\\src",
-        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\sensors.cpp",
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp",
         "-o",
-        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\sensors.cpp.o"
+        "C:\\Users\\Klaus\\Documents\\KAYRON\\RP2040-Zero\\build\\sketch\\RP2040-Zero.ino.cpp.o"
       ],
       "defines": [
         "USBD_PID=0x0003",

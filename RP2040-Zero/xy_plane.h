@@ -17,6 +17,8 @@
 
 extern float sensor1Offset;
 extern float sensor2Offset;
+extern MoveSequenceState moveSeqState;
+extern CaptureSequenceState captureSeqState;
 
 void moveToAngles(float targetShoulder, float targetElbow);
 void moveToHomeXY();

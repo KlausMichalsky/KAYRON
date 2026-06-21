@@ -33,36 +33,26 @@ void coreInit() {
 
 // CONTROL DE TAREAS EN EL FLUJO
 // -----------------------------------------------------------------------
+
 void coreUpdate() {
     if (homeAllState != HomeAllState::IDLE) {
         coreHomeAll();
         return;
     }
+
     if (homeSingleState != HomeSingleState::IDLE) {
         coreHomeSingleMotor();
         return;
     }
 
-    void coreUpdate() {
-        if (homeAllState != HomeAllState::IDLE) {
-            coreHomeAll();
-            return;
-        }
+    updateXY();
+    updateZ();
 
-        if (homeSingleState != HomeSingleState::IDLE) {
-            coreHomeSingleMotor();
-            return;
-        }
-
-        updateXY();
-        updateZ();
-
-        // 🔥 SOLO UNA STATE MACHINE ACTIVA
-        if (captureSeqState != CaptureSequenceState::IDLE) {
-            updateCaptureSequence();
-        } else if (moveSeqState != MoveSequenceState::IDLE) {
-            updateMoveSequence();
-        }
+    // 🔥 SOLO UNA STATE MACHINE ACTIVA
+    if (captureSeqState != CaptureSequenceState::IDLE) {
+        updateCaptureSequence();
+    } else if (moveSeqState != MoveSequenceState::IDLE) {
+        updateMoveSequence();
     }
     // ...otras tareas
 }
