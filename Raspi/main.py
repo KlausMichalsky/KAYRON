@@ -212,6 +212,7 @@ while True:
             capture_square = chess.square_name(move.to_square)
             send_to_robot(f"REMOVE {capture_square}")
             wait_for("CAPTURE DONE")
+            print("✅ Pieza enemiga removida")
 
         else:
             # movimiento normal
