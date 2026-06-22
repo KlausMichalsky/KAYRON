@@ -261,5 +261,5 @@ inline const MotorConfig motor3Config = {
     .stepsLimit = -100, // pasos máximos si arranca fuera del imán (solo motor3)
     .timeout = 12000,
     .baseSpeed = BASE_SPEED,
-    .acceleration = 15000.0,
+    .acceleration = 8000.0,
     .enablePin = MOTOR3_ENABLE};
