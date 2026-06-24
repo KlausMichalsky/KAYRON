@@ -1,14 +1,5 @@
 // =======================================================================
-//                          🔹 K A Y R O N 🔹
-// =======================================================================
-//  Archivo    : z_axis.cpp
-//  Autor      : Klaus Michalsky
-//  Fecha      : Feb-2026
-// -----------------------------------------------------------------------
-//  ▫️ DESCRIPCIÓN
-//      - Definición de funciones para movimiento del eje Z
-//      - Sincronización de movimiento del eje Z
-//      - Controll del electroimán
+//                 🔹 C H E S S B O T  —   Z E R O 🔹
 // =======================================================================
 
 #include <Arduino.h>
@@ -24,16 +15,22 @@ MovingStateZ movingStateZ = MovingStateZ::IDLE;
 
 // MOVIMIENTOS BASE (NO BLOQUEANTES)
 // -----------------------------------------------------------------------
-void zMoveDown() {
-    motor3.setMaxSpeed(motor3Config.fastSpeed);
-    motor3.setAcceleration(motor3Config.acceleration);
-    motor3.moveTo(Z_STEPS_DOWN);
+void zMoveHome() {
+    motor3.setMaxSpeed(6000);
+    motor3.setAcceleration(15000);
+    motor3.moveTo(0);
 }
 
-void zMoveUp() {
-    motor3.setMaxSpeed(motor3Config.fastSpeed);
-    motor3.setAcceleration(motor3Config.acceleration);
-    motor3.moveTo(0);
+void zMoveDown() {
+    motor3.setMaxSpeed(6000);
+    motor3.setAcceleration(15000);
+    motor3.moveTo(Z_STEPS_DOWN - Z_HOME_OFFSET); // mover hacia abajo hasta la posición de agarre
+}
+
+void zMoveTravel() { // Subir a altura segura para mover alzar la pieza (Z arriba)
+    motor3.setMaxSpeed(6000);
+    motor3.setAcceleration(15000);
+    motor3.moveTo(Z_TRAVEL_POS);
 }
 
 // ELECTROIMÁN
@@ -70,10 +67,10 @@ void updateZ() {
             motor3.run();
 
             if (motor3.distanceToGo() == 0) {
-                COMM.println("Z: GRIP");
+                Serial1.println("Z: GRIP");
                 magnetON();
                 movingStateZ = MovingStateZ::PICK_GRIP;
-                zMoveUp(); // siguiente acción inmediata
+                zMoveTravel();
             }
             break;
 
@@ -91,7 +88,7 @@ void updateZ() {
         case MovingStateZ::PICK_UP:
 
             if (motor3.distanceToGo() == 0) {
-                COMM.println("Z PICK DONE");
+                Serial1.println("Z PICK DONE");
                 movingStateZ = MovingStateZ::IDLE;
             }
             break;
@@ -102,10 +99,10 @@ void updateZ() {
             motor3.run();
 
             if (motor3.distanceToGo() == 0) {
-                COMM.println("Z: RELEASE");
+                Serial1.println("Z: RELEASE");
                 magnetOFF();
                 movingStateZ = MovingStateZ::PLACE_RELEASE;
-                zMoveUp();
+                zMoveHome();
             }
             break;
 
@@ -123,7 +120,7 @@ void updateZ() {
         case MovingStateZ::PLACE_UP:
 
             if (motor3.distanceToGo() == 0) {
-                COMM.println("Z PLACE DONE");
+                Serial1.println("Z PLACE DONE");
                 movingStateZ = MovingStateZ::IDLE;
             }
             break;

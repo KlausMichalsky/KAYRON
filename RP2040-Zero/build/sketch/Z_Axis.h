@@ -21,8 +21,9 @@
 // estado global del Z
 extern MovingStateZ movingStateZ;
 
+void zMoveHome();
 void zMoveDown();
-void zMoveUp();
+void zMoveTravel();
 void magnetON();
 void magnetOFF();
 void startZPick();

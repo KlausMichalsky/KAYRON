@@ -270,7 +270,7 @@ void homingStepZ(AccelStepper &motor,
 
     switch (st.state) {
         case HomingStateZ::FIND_EDGE_DOWNWARD:
-            motor.setSpeed(dir * cfg.slowSpeed);
+            motor.setSpeed(dir * cfg.fastSpeed);
             motor.runSpeed();
             if (!imanPresente) {
                 st.edge = motor.currentPosition();
@@ -284,6 +284,10 @@ void homingStepZ(AccelStepper &motor,
             motor.runSpeed();
             if (imanPresente) {
                 st.edge = motor.currentPosition();
+
+                Serial1.print("EDGE=");
+                Serial1.println(st.edge);
+
                 st.state = HomingStateZ::MOVE_TO_REFERENCE;
             } else if (motor.currentPosition() <= cfg.stepsLimit) {
                 st.state = HomingStateZ::ERROR;
@@ -291,9 +295,10 @@ void homingStepZ(AccelStepper &motor,
             break;
 
         case HomingStateZ::MOVE_TO_REFERENCE:
-            motor.setSpeed(-cfg.slowSpeed);
+            motor.setSpeed(cfg.slowSpeed); // bajar
             motor.runSpeed();
-            if (motor.currentPosition() <= st.edge - 500) {
+
+            if (motor.currentPosition() >= st.edge + Z_HOME_OFFSET) {
                 motor.stop();
                 motor.setCurrentPosition(0);
                 digitalWrite(cfg.enablePin, ENABLE_INACTIVE);
